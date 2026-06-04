@@ -839,15 +839,30 @@ const deleteAppointment =
   return;
 }
 
+const barberPhone = '8295911178',
 const message =
   `La cita de ${managedAppointment?.customer_name}
-fue actualizada correctamente.`;
+fue actualizada correctamente.
 
-await sendWhatsappService({
-  phone: '18295911178',
+Fecha: ${managedAppointment.booking_date}
 
-  message,
-});
+Hora: ${managedAppointment.booking_hour}`,
+
+ try {
+
+  await sendWhatsappService({
+    phone: `1${barberPhone}`,
+    message,
+  });
+
+} catch (error) {
+
+  console.error(
+    'Error enviando WhatsApp',
+    error
+  );
+
+}
 
           toast.success(
             'Cita actualizada correctamente'
@@ -895,17 +910,30 @@ await sendWhatsappService({
   return;
 }
 
-await sendWhatsappService({
-  phone: '18295911178',
-
-  message: `❌ Cita cancelada
-
-Cliente: ${managedAppointment.customer_name}
+ const barberPhone = '8295911178',        
+ const message = `La cita de ${managedAppointment?.customer_name}
+fue actualizada correctamente.
 
 Fecha: ${managedAppointment.booking_date}
 
 Hora: ${managedAppointment.booking_hour}`,
-});
+          
+ try {
+
+  await sendWhatsappService({
+    phone: `1${barberPhone}`,
+    message,
+  });
+
+} catch (error) {
+
+  console.error(
+    'Error enviando WhatsApp',
+    error
+  );
+
+}          
+
           toast.success(
             'Cita cancelada correctamente'
           );
