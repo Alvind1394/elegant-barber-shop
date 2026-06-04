@@ -839,14 +839,14 @@ const deleteAppointment =
   return;
 }
 
-const barberPhone = '8295911178',
+const barberPhone = '8295911178';
 const message =
   `La cita de ${managedAppointment?.customer_name}
 fue actualizada correctamente.
 
 Fecha: ${managedAppointment.booking_date}
 
-Hora: ${managedAppointment.booking_hour}`,
+Hora: ${managedAppointment.booking_hour}`;
 
  try {
 
@@ -910,13 +910,13 @@ Hora: ${managedAppointment.booking_hour}`,
   return;
 }
 
- const barberPhone = '8295911178',        
+ const barberPhone = '8295911178';       
  const message = `La cita de ${managedAppointment?.customer_name}
 fue actualizada correctamente.
 
 Fecha: ${managedAppointment.booking_date}
 
-Hora: ${managedAppointment.booking_hour}`,
+Hora: ${managedAppointment.booking_hour}`;
           
  try {
 
