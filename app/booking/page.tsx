@@ -296,17 +296,13 @@ if (isBlocked) {
         appointmentDate.setSeconds(0);
 
         // MÍNIMO 2 HORAS
-        const difference =
-          appointmentDate.getTime() -
-          now.getTime();
+          const difference =
+  appointmentDate.getTime() -
+  now.getTime();
 
-        const minutesDifference =
-  difference / (1000 * 60);
-
-if (minutesDifference < 120) {
+if (difference <= 0) {
   return false;
 }
-
       }
     }
 
