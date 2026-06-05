@@ -78,7 +78,7 @@ console.log(
   'default'
 ) {
 
-  Notification.requestPermission();
+  //Notification.requestPermission();
 }
 
   const interval =
@@ -135,11 +135,7 @@ if (
     '⚠️ Quedan 5 minutos',
   
   );
-
-  sendNotification(
-  'Barbería',
-  'Quedan 5 minutos'
-);
+  
 const audio =
     new Audio(
       '/sounds/5-minutos.mp3'
@@ -161,10 +157,6 @@ if (
     '⏰ Queda 1 minuto'
   );
 
-  sendNotification(
-  'Barbería',
-  'Queda 1 minuto'
-);
   const audio =
     new Audio(
       '/sounds/alarm.mp3'
@@ -202,10 +194,6 @@ if (
     '⏰ Servicio terminado'
   );
 
- sendNotification(
-  'Servicio terminado',
-  customerName
-);
 
   const audio =
     new Audio(
