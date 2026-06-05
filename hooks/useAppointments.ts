@@ -94,7 +94,7 @@ const playNotificationSound = async () => {
   'INSERT'
 ) {
 
-  playNotificationSound();
+  //playNotificationSound();
 
   toast.info(
     `👤 ${payload.new.customer_name}
