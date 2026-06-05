@@ -82,6 +82,32 @@ const [
       const now =
         Date.now();
 
+      if (!timerEnd) {
+
+  console.error(
+    'timerEnd vacío'
+  );
+
+  return;
+}
+
+      const parsedDate =
+  new Date(timerEnd);
+
+if (
+  isNaN(
+    parsedDate.getTime()
+  )
+) {
+
+  console.error(
+    'Fecha inválida:',
+    timerEnd
+  );
+
+  return;
+}
+
    const end =
   new Date(timerEnd).getTime();
 
