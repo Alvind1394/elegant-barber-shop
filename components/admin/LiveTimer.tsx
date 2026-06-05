@@ -131,6 +131,43 @@ if (
   return;
 }
 
+        const hours =
+        Math.floor(
+          distance /
+          (1000 * 60 * 60)
+        );
+
+      const minutes =
+        Math.floor(
+          (
+            distance %
+            (1000 * 60 * 60)
+          ) /
+          (1000 * 60)
+        );
+
+      const seconds =
+        Math.floor(
+          (
+            distance %
+            (1000 * 60)
+          ) / 1000
+        );
+  
+if (
+  Number.isNaN(hours) ||
+  Number.isNaN(minutes) ||
+  Number.isNaN(seconds)
+) {
+
+  console.error(
+    'Tiempo inválido'
+  );
+
+  return;
+}
+  
+
      const secondsLeft =
   Math.floor(
     distance / 1000
@@ -185,42 +222,7 @@ if (
   finishedRef.current =
     true;
 
-      const hours =
-        Math.floor(
-          distance /
-          (1000 * 60 * 60)
-        );
-
-      const minutes =
-        Math.floor(
-          (
-            distance %
-            (1000 * 60 * 60)
-          ) /
-          (1000 * 60)
-        );
-
-      const seconds =
-        Math.floor(
-          (
-            distance %
-            (1000 * 60)
-          ) / 1000
-        );
-  
-if (
-  Number.isNaN(hours) ||
-  Number.isNaN(minutes) ||
-  Number.isNaN(seconds)
-) {
-
-  console.error(
-    'Tiempo inválido'
-  );
-
-  return;
-}
-  
+      
   setTimeLeft(
     '00:00:00'
   );
