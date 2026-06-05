@@ -967,7 +967,7 @@ const inProgressCount =
 
             </div>
 
-           {/*{appointment.timer_end && (
+           {appointment.timer_end && (
   <LiveTimer
     timerEnd={appointment.timer_end}
     appointmentId={appointment.id}
@@ -975,7 +975,7 @@ const inProgressCount =
     onAutoComplete={onComplete}
   />
 )}
-*/}
+
 
             <button
               onClick={() =>
