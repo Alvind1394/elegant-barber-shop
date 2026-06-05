@@ -61,10 +61,8 @@ const warnedFiveMinutes =
 const warnedOneMinute =
   useRef(false);
 
-const [
-  finished,
-  setFinished,
-] = useState(false);
+const finishedRef =
+  useRef(false);
 
   useEffect(() => {
 console.log(
@@ -121,6 +119,18 @@ if (
       const distance =
         end - now;
 
+        if (
+  Number.isNaN(distance)
+) {
+
+  console.error(
+    'Distance inválida',
+    timerEnd
+  );
+
+  return;
+}
+
      const secondsLeft =
   Math.floor(
     distance / 1000
@@ -136,10 +146,10 @@ if (
   
   );
   
-const audio =
-    new Audio(
-      '/sounds/5-minutos.mp3'
-    );
+//const audio =
+    //new Audio(
+      //'/sounds/5-minutos.mp3'
+    //);
 
   //audio.play();
 
@@ -157,10 +167,10 @@ if (
     '⏰ Queda 1 minuto'
   );
 
-  const audio =
-    new Audio(
-      '/sounds/alarm.mp3'
-    );
+  //const audio =
+    //new Audio(
+      //'/sounds/alarm.mp3'
+    //);
 
 
   warnedOneMinute.current =
@@ -169,13 +179,25 @@ if (
 
 if (
   distance <= 0 &&
-  !finished
+  !finishedRef.current
 ) {
 
-  setFinished(
-    true
+  finishedRef.current =
+    true;
+
+if (
+  Number.isNaN(hours) ||
+  Number.isNaN(minutes) ||
+  Number.isNaN(seconds)
+) {
+
+  console.error(
+    'Tiempo inválido'
   );
 
+  return;
+}
+  
   setTimeLeft(
     '00:00:00'
   );
@@ -185,10 +207,10 @@ if (
   );
 
 
-  const audio =
-    new Audio(
-      '/sounds/1-minuto.mp3'
-    );
+  //const audio =
+    //new Audio(
+      //'/sounds/1-minuto.mp3'
+    //);
 
   //audio.play();
 
