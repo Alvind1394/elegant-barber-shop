@@ -82,10 +82,8 @@ const [
       const now =
         Date.now();
 
-      const end =
-  new Date(
-    timerEnd + 'Z'
-  ).getTime();
+   const end =
+  new Date(timerEnd).getTime();
 
       const distance =
         end - now;
