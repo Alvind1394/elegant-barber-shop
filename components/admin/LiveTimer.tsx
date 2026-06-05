@@ -185,6 +185,29 @@ if (
   finishedRef.current =
     true;
 
+      const hours =
+        Math.floor(
+          distance /
+          (1000 * 60 * 60)
+        );
+
+      const minutes =
+        Math.floor(
+          (
+            distance %
+            (1000 * 60 * 60)
+          ) /
+          (1000 * 60)
+        );
+
+      const seconds =
+        Math.floor(
+          (
+            distance %
+            (1000 * 60)
+          ) / 1000
+        );
+  
 if (
   Number.isNaN(hours) ||
   Number.isNaN(minutes) ||
@@ -228,29 +251,6 @@ if (
 
   return;
 }
-
-      const hours =
-        Math.floor(
-          distance /
-          (1000 * 60 * 60)
-        );
-
-      const minutes =
-        Math.floor(
-          (
-            distance %
-            (1000 * 60 * 60)
-          ) /
-          (1000 * 60)
-        );
-
-      const seconds =
-        Math.floor(
-          (
-            distance %
-            (1000 * 60)
-          ) / 1000
-        );
 
       setTimeLeft(
         `${String(
