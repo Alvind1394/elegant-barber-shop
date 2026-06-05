@@ -141,7 +141,7 @@ const audio =
       '/sounds/5-minutos.mp3'
     );
 
-  audio.play();
+  //audio.play();
 
 
  warnedFiveMinutes.current =
@@ -161,16 +161,6 @@ if (
     new Audio(
       '/sounds/alarm.mp3'
     );
-
- setTimeout(
-    () => audio.play(),
-    2000
-  );
-
-  setTimeout(
-    () => audio.play(),
-    4000
-  );
 
 
   warnedOneMinute.current =
@@ -200,7 +190,7 @@ if (
       '/sounds/1-minuto.mp3'
     );
 
-  audio.play();
+  //audio.play();
 
   setTimeout(() => {
 
