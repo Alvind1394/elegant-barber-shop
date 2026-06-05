@@ -67,7 +67,12 @@ const [
 ] = useState(false);
 
   useEffect(() => {
+console.log(
+  'LIVE TIMER MOUNT',
+  timerEnd
+);
 
+    
     if (
   Notification.permission ===
   'default'
@@ -79,6 +84,8 @@ const [
   const interval =
     setInterval(() => {
 
+      try {
+        
       const now =
         Date.now();
 
@@ -264,6 +271,15 @@ if (
         )}`
       );
 
+} catch (error) {
+
+  console.error(
+    'LIVE TIMER ERROR',
+    error
+  );
+
+}
+        
     }, 1000);
 
   return () =>
