@@ -141,7 +141,7 @@ const handleStart =
       })
       .eq('id', id);
 
-    refreshAppointments();
+    //refreshAppointments();
   };
 
 const handleComplete =
